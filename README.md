@@ -1,5 +1,8 @@
 #  Ferrity 🟠
 
+[![Get it on Modrinth](https://img.shields.io/badge/Get%20it%20on-Modrinth-00AF5C?logo=modrinth&logoColor=white)](https://modrinth.com/mod/ferrity)
+[![Get it on CurseForge](https://img.shields.io/badge/Get%20it%20on-CurseForge-F16436?logo=curseforge&logoColor=white)](https://www.curseforge.com/minecraft/mc-mods/ferrity/preview)
+
 ![Person asking a chatbot called "Ferrity" about the date](https://cdn.modrinth.com/data/cached_images/7b2e2354654a25c6aadf5f0d2584d2cd8fa2e68f.png)
 
 **A tiny orange companion that can actually understand your Minecraft world.**
