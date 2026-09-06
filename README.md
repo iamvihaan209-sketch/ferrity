@@ -1,7 +1,14 @@
 #  Ferrity 🟠
 
-[![Get it on Modrinth](https://img.shields.io/badge/Get%20it%20on-Modrinth-00AF5C?logo=modrinth&logoColor=white)](https://modrinth.com/mod/ferrity)
-[![Get it on CurseForge](https://img.shields.io/badge/Get%20it%20on-CurseForge-F16436?logo=curseforge&logoColor=white)](https://www.curseforge.com/minecraft/mc-mods/ferrity/preview)
+<p align="center">
+  <a href="https://modrinth.com/mod/ferrity">
+    <img src="https://img.shields.io/badge/GET%20IT%20ON-MODRINTH-00AF5C?style=for-the-badge&logo=modrinth&logoColor=white" height="44">
+  </a>
+  &nbsp;
+  <a href="https://www.curseforge.com/minecraft/mc-mods/ferrity/preview">
+    <img src="https://img.shields.io/badge/GET%20IT%20ON-CURSEFORGE-F16436?style=for-the-badge&logo=curseforge&logoColor=white" height="44">
+  </a>
+</p>
 
 ![Person asking a chatbot called "Ferrity" about the date](https://cdn.modrinth.com/data/cached_images/7b2e2354654a25c6aadf5f0d2584d2cd8fa2e68f.png)
 
