@@ -138,7 +138,9 @@
       "ferritymod.configuration.model": "AI Model (e.g. gemini-3.5-flash)",
       "ferritymod.configuration.baseurl": "baseUrl (only use with local setups, otherwise leave blank)",
       "ferritymod.configuration.apikey": "API Key",
-      "item.ferritymod.ferrityitem": "Ferrityitem"
+      "item.ferritymod.ferrityitem": "Ferrity",
+      "ferritymod.configuration.section.ferrity.toml": "Server",
+      "ferritymod.configuration.section.ferrity.client.toml": "Client"
     }
   },
   "metadata": {
@@ -158,11 +160,11 @@
   "workspaceSettings": {
     "modid": "ferritymod",
     "modName": "Ferrity",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Basically Verity except he\u0027s always nice and dont become monster ",
     "author": "Vihaan7_8",
-    "websiteURL": "https://aboutvihaan7-8.yzz.me",
-    "license": "All Rights Reserved",
+    "websiteURL": "https://aboutvihaan7-8.yzz.me/ferrity",
+    "license": "GNU General Public License version 3 (GPLv3)",
     "serverSideOnly": false,
     "modPicture": "ferritytexture",
     "requiredMods": [],

@@ -1,0 +1,27 @@
+{
+  "stats": {
+    "minecraft:used": {
+      "ferritymod:ferrityitem": 20
+    },
+    "minecraft:picked_up": {
+      "ferritymod:ferrityitem": 3
+    },
+    "minecraft:dropped": {
+      "ferritymod:ferrityitem": 3
+    },
+    "minecraft:custom": {
+      "minecraft:sprint_one_cm": 388,
+      "minecraft:time_since_rest": 4600,
+      "minecraft:walk_one_cm": 13948,
+      "minecraft:total_world_time": 16981,
+      "minecraft:leave_game": 2,
+      "minecraft:fly_one_cm": 6282,
+      "minecraft:play_time": 6961,
+      "minecraft:deaths": 1,
+      "minecraft:jump": 12,
+      "minecraft:time_since_death": 2246,
+      "minecraft:drop": 3
+    }
+  },
+  "DataVersion": 4790
+}

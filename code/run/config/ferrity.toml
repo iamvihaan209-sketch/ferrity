@@ -1,0 +1,24 @@
+#Ferrity dedicated server AI configuration
+#
+#Used when Ferrity is running on a dedicated server.
+#
+#Supported providers:
+#gemini
+#groq
+#ollama
+#openai-compatible
+#Which AI provider Ferrity should use.
+#gemini, groq, ollama, or openai-compatible
+provider = ""
+#API key for the selected provider.
+#Leave blank for local servers such as Ollama.
+#DO NOT share this value.
+apikey = ""
+#Model name.
+#This is free-form so Ferrity does not need an update
+#every time a provider adds a model.
+model = ""
+#Custom server/API base URL.
+#Mainly used for Ollama and OpenAI-compatible servers.
+#Leave blank to use Ferrity's default for Gemini/Groq.
+baseurl = ""

@@ -1,12 +1,12 @@
 modLoader="javafml"
 loaderVersion="[4,)"
-license="All Rights Reserved"
+license="GNU General Public License version 3 (GPLv3)"
 
 [[mods]]
 modId="ferritymod"
-version="0.1.0"
+version="0.1.1"
 displayName="Ferrity"
-displayURL="https://aboutvihaan7-8.yzz.me"
+displayURL="https://aboutvihaan7-8.yzz.me/ferrity"
 logoFile="logo.png"
 credits="just me :o "
 authors="Vihaan7_8"

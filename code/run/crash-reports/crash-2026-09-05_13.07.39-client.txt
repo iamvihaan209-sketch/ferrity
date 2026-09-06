@@ -1,0 +1,173 @@
+---- Minecraft Crash Report ----
+// Don't do that.
+
+Time: 2026-09-05 13:07:39
+Description: Unexpected error
+
+java.lang.IllegalStateException: Missing elements in vertex: UV1
+	at TRANSFORMER/minecraft@26.1.2/com.mojang.blaze3d.vertex.BufferBuilder.endLastVertex(BufferBuilder.java:122) ~[minecraft-patched-26.1.2.95.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/com.mojang.blaze3d.vertex.BufferBuilder.beginVertex(BufferBuilder.java:89) ~[minecraft-patched-26.1.2.95.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/com.mojang.blaze3d.vertex.BufferBuilder.addVertex(BufferBuilder.java:149) ~[minecraft-patched-26.1.2.95.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/com.mojang.blaze3d.vertex.VertexConsumer.addVertex(VertexConsumer.java:101) ~[minecraft-patched-26.1.2.95.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/com.mojang.blaze3d.vertex.VertexConsumer.addVertex(VertexConsumer.java:96) ~[minecraft-patched-26.1.2.95.jar:?] {}
+	at TRANSFORMER/ferritymod@1.0.0/com.vihaan.ferritymod.client.renderer.FerrityRenderer.drawFerrity(FerrityRenderer.java:90) ~[main/:?] {}
+	at TRANSFORMER/ferritymod@1.0.0/com.vihaan.ferritymod.client.renderer.FerrityRenderer.lambda$submit$0(FerrityRenderer.java:73) ~[main/:?] {}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.client.renderer.feature.CustomFeatureRenderer.renderSolid(CustomFeatureRenderer.java:29) ~[minecraft-patched-26.1.2.95.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.client.renderer.feature.FeatureRenderDispatcher.renderSolidFeatures(FeatureRenderDispatcher.java:67) ~[minecraft-patched-26.1.2.95.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.client.renderer.LevelRenderer.lambda$addMainPass$0(LevelRenderer.java:706) ~[minecraft-patched-26.1.2.95.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/com.mojang.blaze3d.framegraph.FrameGraphBuilder.execute(FrameGraphBuilder.java:71) ~[minecraft-patched-26.1.2.95.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.client.renderer.LevelRenderer.renderLevel(LevelRenderer.java:552) ~[minecraft-patched-26.1.2.95.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.client.renderer.GameRenderer.renderLevel(GameRenderer.java:728) ~[minecraft-patched-26.1.2.95.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.client.renderer.GameRenderer.render(GameRenderer.java:456) ~[minecraft-patched-26.1.2.95.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.client.Minecraft.renderFrame(Minecraft.java:1382) [minecraft-patched-26.1.2.95.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.client.Minecraft.runTick(Minecraft.java:1329) [minecraft-patched-26.1.2.95.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.client.Minecraft.run(Minecraft.java:937) [minecraft-patched-26.1.2.95.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.client.main.Main.main(Main.java:246) [minecraft-patched-26.1.2.95.jar:?] {}
+	at net.neoforged.fml.startup.Client.main(Client.java:19) [loader-11.0.15.jar:11.0] {}
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?] {}
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?] {}
+	at net.neoforged.devlaunch.Main.main(Main.java:57) [DevLaunch-1.0.2.jar:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at TRANSFORMER/minecraft@26.1.2/com.mojang.blaze3d.vertex.BufferBuilder.endLastVertex(BufferBuilder.java:122) ~[minecraft-patched-26.1.2.95.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/com.mojang.blaze3d.vertex.BufferBuilder.beginVertex(BufferBuilder.java:89) ~[minecraft-patched-26.1.2.95.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/com.mojang.blaze3d.vertex.BufferBuilder.addVertex(BufferBuilder.java:149) ~[minecraft-patched-26.1.2.95.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/com.mojang.blaze3d.vertex.VertexConsumer.addVertex(VertexConsumer.java:101) ~[minecraft-patched-26.1.2.95.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/com.mojang.blaze3d.vertex.VertexConsumer.addVertex(VertexConsumer.java:96) ~[minecraft-patched-26.1.2.95.jar:?] {}
+	at TRANSFORMER/ferritymod@1.0.0/com.vihaan.ferritymod.client.renderer.FerrityRenderer.drawFerrity(FerrityRenderer.java:90) ~[main/:?] {}
+	at TRANSFORMER/ferritymod@1.0.0/com.vihaan.ferritymod.client.renderer.FerrityRenderer.lambda$submit$0(FerrityRenderer.java:73) ~[main/:?] {}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.client.renderer.feature.CustomFeatureRenderer.renderSolid(CustomFeatureRenderer.java:29) ~[minecraft-patched-26.1.2.95.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.client.renderer.feature.FeatureRenderDispatcher.renderSolidFeatures(FeatureRenderDispatcher.java:67) ~[minecraft-patched-26.1.2.95.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.client.renderer.LevelRenderer.lambda$addMainPass$0(LevelRenderer.java:706) ~[minecraft-patched-26.1.2.95.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/com.mojang.blaze3d.framegraph.FrameGraphBuilder.execute(FrameGraphBuilder.java:71) ~[minecraft-patched-26.1.2.95.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.client.renderer.LevelRenderer.renderLevel(LevelRenderer.java:552) ~[minecraft-patched-26.1.2.95.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.client.renderer.GameRenderer.renderLevel(GameRenderer.java:728) ~[minecraft-patched-26.1.2.95.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.client.renderer.GameRenderer.render(GameRenderer.java:456) ~[minecraft-patched-26.1.2.95.jar:?] {neoforge:access_transformer}
+-- Uptime --
+Details:
+	JVM uptime: 63.210s
+	Wall uptime: 27.013s
+	High-res time: 54.643s
+	Client ticks: 302 ticks / 15.100s
+Stacktrace:
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.client.Minecraft.fillReport(Minecraft.java:2472) [minecraft-patched-26.1.2.95.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.client.Minecraft.emergencySaveAndCrash(Minecraft.java:992) [minecraft-patched-26.1.2.95.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.client.Minecraft.run(Minecraft.java:960) [minecraft-patched-26.1.2.95.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.client.main.Main.main(Main.java:246) [minecraft-patched-26.1.2.95.jar:?] {}
+	at net.neoforged.fml.startup.Client.main(Client.java:19) [loader-11.0.15.jar:11.0] {}
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?] {}
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?] {}
+	at net.neoforged.devlaunch.Main.main(Main.java:57) [DevLaunch-1.0.2.jar:?] {}
+
+
+-- Affected level --
+Details:
+	All players: 1 total; LocalPlayer{name=Dev, id=2, pos=(-6.491851559245307, 56.0, 15.964669973319113), mode=CREATIVE, permission=owner}
+	Chunk stats: 289, 149
+	Level dimension: minecraft:overworld
+	Level time: 2283 game time, 0 day time
+	Level spawn location: World: (0,56,0), Section: (at 0,8,0 in 0,3,0; chunk contains blocks 0,-64,0 to 15,319,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,-64,0 to 511,319,511)
+	Server brand: neoforge
+	Server type: Integrated singleplayer server
+	Tracked entity count: 2
+	Client weather: Raining: false, thundering: false
+
+-- Last reload --
+Details:
+	Reload number: 1
+	Reload reason: initial
+	Finished: Yes
+	Packs: vanilla, mod_resources, mod/neoforge, mod/ferritymod
+
+-- System Details --
+Details:
+	Minecraft Version: 26.1.2
+	Minecraft Version ID: 26.1.2
+	Operating System: Mac OS X (x86_64) version 12.7.6
+	Java Version: 25.0.2, JetBrains s.r.o.
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), JetBrains s.r.o.
+	Memory: 251963416 bytes (240 MiB) / 752877568 bytes (718 MiB) up to 2147483648 bytes (2048 MiB)
+	Memory (heap): init: 128MiB, used: 477MiB, committed: 718MiB, max: 2048MiB
+	Memory (non-head): init: 007MiB, used: 195MiB, committed: 198MiB, max: 000MiB
+	CPUs: 4
+	Processor Vendor: GenuineIntel
+	Processor Name: Intel(R) Core(TM) i5-5350U CPU @ 1.80GHz
+	Identifier: Intel64 Family 6 Model 61 Stepping 4
+	Microarchitecture: Broadwell (Client)
+	Frequency (GHz): 1.80
+	Number of physical packages: 1
+	Number of physical CPUs: 2
+	Number of logical CPUs: 4
+	Graphics card #0 name: Intel HD Graphics 6000
+	Graphics card #0 vendor: Intel
+	Graphics card #0 VRAM (MiB): 1536.00
+	Graphics card #0 deviceId: 0x1626
+	Graphics card #0 versionInfo: Revision ID: 0x0009
+	Memory slot #0 capacity (MiB): 4096.00
+	Memory slot #0 clockSpeed (GHz): 1.60
+	Memory slot #0 type: DDR3
+	Memory slot #1 capacity (MiB): 4096.00
+	Memory slot #1 clockSpeed (GHz): 1.60
+	Memory slot #1 type: DDR3
+	Virtual memory max (MiB): 10240.00
+	Virtual memory used (MiB): 6265.67
+	Swap memory total (MiB): 2048.00
+	Swap memory used (MiB): 768.00
+	Space in storage for jna.tmpdir (MiB): <path not set>
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): <path not set>
+	Space in storage for io.netty.native.workdir (MiB): <path not set>
+	Space in storage for java.io.tmpdir (MiB): available: 19637.04, total: 115511.96
+	Space in storage for workdir (MiB): available: 58252.45, total: 58473.96
+	JVM Flags: 0 total; 
+	Debug Flags: 0 total; 
+	Launched Version: 26.1.2.95
+	Backend library: LWJGL version 3.4.1+2
+	Backend API: Intel(R) HD Graphics 6000 GL version 4.1 INTEL-18.8.16, Intel Inc.
+	Window size: 854x480
+	GFLW Platform: cocoa
+	Render Extensions: GL_EXT_texture_filter_anisotropic
+	GL debug messages: <debugging unavailable>
+	Is Modded: Definitely; Client brand changed to 'neoforge'; Server brand changed to 'neoforge'
+	Universe: 400921fb54442d18
+	Type: Integrated Server
+	Transparency: regular
+	Render Distance: 5/5 chunks
+	Resource Packs: vanilla, mod_resources, mod/neoforge (incompatible), mod/ferritymod (incompatible)
+	Sound Cache: 48816 bytes in 1 buffers
+	Current Language: en_us
+	Locale: en_US
+	System encoding: UTF-8
+	File encoding: UTF-8
+	CPU: 4x Intel(R) Core(TM) i5-5350U CPU @ 1.80GHz
+	Server Running: true
+	Player Count: 1 / 8; [ServerPlayer['Dev'/2, l='ServerLevel[New World]', x=-6.49, y=56.00, z=15.96]]
+	Active Data Packs: vanilla, mod_data, mod/neoforge, mod/ferritymod
+	Available Data Packs: minecart_improvements, redstone_experiments, trade_rebalance, vanilla, mod/ferritymod, mod/neoforge, mod_data
+	Enabled Feature Flags: minecraft:vanilla
+	World Generation: Stable
+	World Seed: -4817436046019101060
+	Suppressed Exceptions: ~~NONE~~
+	Class Processors: 
+		00.00%: neoforge:neoforge_dev_dist_cleaner
+		00.00%: neoforge:computing_frames (marker)
+		00.00%: neoforge:runtime_enum_extender
+		04.37%: neoforge:access_transformer
+		00.04%: neoforge:mixin
+		00.00%: neoforge:simple_processors_default (marker)
+		00.01%: neoforge.coremods:field_to_getter.net.minecraft.world.level.biome.biome
+		00.01%: neoforge.coremods:field_to_getter.net.minecraft.world.level.block.flowerpotblock
+		00.01%: neoforge.coremods:field_to_getter.net.minecraft.world.level.levelgen.structure.structure
+		00.28%: neoforge.coremods:method_redirector
+	Mod List: 
+		main                                              |Ferrity                       |ferritymod                    |1.0.0               |Manifest: NOSIGNATURE
+		minecraft-patched-26.1.2.95.jar                   |Minecraft                     |minecraft                     |26.1.2              |Manifest: NOSIGNATURE
+		neoforge-26.1.2.95-universal.jar                  |NeoForge                      |neoforge                      |26.1.2.95           |Manifest: NOSIGNATURE
+	Crash Report UUID: fd33cb66-c6a9-4296-a6d4-5295af6d50d9
+	FML: 11.0.15
+	NeoForge: 26.1.2.95

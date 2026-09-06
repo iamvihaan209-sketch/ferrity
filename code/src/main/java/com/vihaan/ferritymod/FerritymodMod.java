@@ -47,9 +47,29 @@ public class FerritymodMod {
 	public FerritymodMod(IEventBus modEventBus) {
 		// Start of user code block mod constructor
 		net.neoforged.fml.ModList.get().getModContainerById(MODID).ifPresent(container -> {
-			container.registerConfig(net.neoforged.fml.config.ModConfig.Type.CLIENT, Ferrityconfig.SPEC, "ferrity.toml");
-			if (net.neoforged.fml.loading.FMLEnvironment.getDist().isClient()) {
-				FerrityConfigScreen.register(container);
+			/*
+			* CLIENT CONFIG
+			*
+			* Used by the config menu and
+			* integrated singleplayer.
+			*/
+			container.registerConfig(net.neoforged.fml.config.ModConfig.Type.CLIENT, Ferrityconfig.CLIENT_SPEC, "ferrity-client.toml");
+			/*
+			* COMMON CONFIG
+			*
+			* Used by dedicated servers.
+			*/
+			container.registerConfig(net.neoforged.fml.config.ModConfig.Type.COMMON, Ferrityconfig.COMMON_SPEC, "ferrity.toml");
+			/*
+			* CONFIG SCREEN
+			*
+			* This is what makes the Config
+			* button in the Mods screen clickable.
+			*
+			* Only register it on the client.
+			*/
+			if (FMLEnvironment.getDist().isClient()) {
+				container.registerExtensionPoint(net.neoforged.neoforge.client.gui.IConfigScreenFactory.class, (minecraft, parent) -> new net.neoforged.neoforge.client.gui.ConfigurationScreen(container, parent));
 			}
 		});
 		// End of user code block mod constructor

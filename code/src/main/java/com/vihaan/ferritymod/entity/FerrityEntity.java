@@ -8,7 +8,6 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.world.Difficulty;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
@@ -20,7 +19,6 @@ import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.goal.Goal;
-import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -30,7 +28,7 @@ import net.minecraft.world.level.levelgen.Heightmap;
 import com.vihaan.ferritymod.init.FerritymodModEntities;
 import com.vihaan.ferritymod.init.FerritymodModItems;
 
-public class FerrityEntity extends Monster {
+public class FerrityEntity extends Mob {
 
     private boolean followingEnabled = true;
 
@@ -39,6 +37,7 @@ public class FerrityEntity extends Monster {
             Level world
     ) {
         super(type, world);
+
         xpReward = 0;
         setNoAi(false);
     }
@@ -47,7 +46,9 @@ public class FerrityEntity extends Monster {
         return followingEnabled;
     }
 
-    public void setFollowingEnabled(boolean enabled) {
+    public void setFollowingEnabled(
+            boolean enabled
+    ) {
         this.followingEnabled = enabled;
 
         if (!enabled) {
@@ -71,24 +72,29 @@ public class FerrityEntity extends Monster {
 
         ItemStack ferrityItem =
                 new ItemStack(
-                        FerritymodModItems.FERRITYITEM.get()
+                        FerritymodModItems
+                                .FERRITYITEM
+                                .get()
                 );
 
         boolean added =
-                player.getInventory().add(
-                        ferrityItem
-                );
+                player.getInventory()
+                        .add(
+                                ferrityItem
+                        );
 
         /*
-         * If the inventory is full, don't delete Ferrity.
+         * If the inventory is full,
+         * don't delete Ferrity.
          */
         if (!added) {
             return InteractionResult.PASS;
         }
 
         /*
-         * Remove the entity only AFTER the item
-         * successfully entered the inventory.
+         * Remove the entity only AFTER
+         * the item successfully entered
+         * the inventory.
          */
         this.discard();
 
@@ -125,20 +131,24 @@ public class FerrityEntity extends Monster {
     public SoundEvent getHurtSound(
             DamageSource source
     ) {
-        return BuiltInRegistries.SOUND_EVENT.getValue(
-                Identifier.parse(
-                        "entity.generic.hurt"
-                )
-        );
+        return BuiltInRegistries
+                .SOUND_EVENT
+                .getValue(
+                        Identifier.parse(
+                                "entity.generic.hurt"
+                        )
+                );
     }
 
     @Override
     public SoundEvent getDeathSound() {
-        return BuiltInRegistries.SOUND_EVENT.getValue(
-                Identifier.parse(
-                        "entity.generic.death"
-                )
-        );
+        return BuiltInRegistries
+                .SOUND_EVENT
+                .getValue(
+                        Identifier.parse(
+                                "entity.generic.death"
+                        )
+                );
     }
 
     @Override
@@ -146,11 +156,14 @@ public class FerrityEntity extends Monster {
             LevelAccessor level,
             EntitySpawnReason reason
     ) {
-        return this.level().dimension() == Level.OVERWORLD
+        return this.level().dimension()
+                == Level.OVERWORLD
+
                 ? super.checkSpawnRules(
                         level,
                         reason
                 )
+
                 : true;
     }
 
@@ -158,9 +171,14 @@ public class FerrityEntity extends Monster {
             RegisterSpawnPlacementsEvent event
     ) {
         event.register(
-                FerritymodModEntities.FERRITY.get(),
+                FerritymodModEntities
+                        .FERRITY
+                        .get(),
+
                 SpawnPlacementTypes.ON_GROUND,
-                Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+
+                Heightmap.Types
+                        .MOTION_BLOCKING_NO_LEAVES,
 
                 (
                         entityType,
@@ -169,24 +187,7 @@ public class FerrityEntity extends Monster {
                         pos,
                         random
                 ) ->
-                        world.getDifficulty()
-                                != Difficulty.PEACEFUL
-
-                                && (
-                                EntitySpawnReason
-                                        .ignoresLightRequirements(
-                                                reason
-                                        )
-
-                                        || Monster
-                                        .isDarkEnoughToSpawn(
-                                                world,
-                                                pos,
-                                                random
-                                        )
-                        )
-
-                                && Mob.checkMobSpawnRules(
+                        Mob.checkMobSpawnRules(
                                 entityType,
                                 world,
                                 reason,
@@ -199,7 +200,9 @@ public class FerrityEntity extends Monster {
         );
     }
 
-    public static AttributeSupplier.Builder createAttributes() {
+    public static AttributeSupplier.Builder
+    createAttributes() {
+
         AttributeSupplier.Builder builder =
                 Mob.createMobAttributes();
 
@@ -325,7 +328,9 @@ public class FerrityEntity extends Monster {
         @Override
         public void tick() {
             if (!ferrity.isFollowingEnabled()) {
-                ferrity.getNavigation().stop();
+                ferrity.getNavigation()
+                        .stop();
+
                 return;
             }
 
@@ -350,7 +355,9 @@ public class FerrityEntity extends Monster {
                             <= STOP_DISTANCE
                             * STOP_DISTANCE
             ) {
-                ferrity.getNavigation().stop();
+                ferrity.getNavigation()
+                        .stop();
+
                 return;
             }
 
@@ -371,7 +378,8 @@ public class FerrityEntity extends Monster {
 
         @Override
         public void stop() {
-            ferrity.getNavigation().stop();
+            ferrity.getNavigation()
+                    .stop();
 
             this.player = null;
             this.repathTicks = 0;

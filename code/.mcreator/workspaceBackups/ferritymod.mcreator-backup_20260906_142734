@@ -1,0 +1,177 @@
+{
+  "mod_elements": [
+    {
+      "name": "Ferrity",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "ferrity",
+      "metadata": {
+        "files": [
+          "src/main/java/com/vihaan/ferritymod/entity/FerrityEntity.java",
+          "src/main/resources/assets/ferritymod/items/ferrity_spawn_egg.json",
+          "src/main/java/com/vihaan/ferritymod/client/renderer/FerrityRenderer.java",
+          "src/main/resources/data/ferritymod/neoforge/biome_modifier/ferrity_biome_modifier.json"
+        ]
+      }
+    },
+    {
+      "name": "Ferrityspawned",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "ferrityspawned",
+      "metadata": {
+        "files": [
+          "src/main/java/com/vihaan/ferritymod/Ferrityspawned.java"
+        ]
+      }
+    },
+    {
+      "name": "Ferrityconfig",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "ferrityconfig",
+      "metadata": {
+        "files": [
+          "src/main/java/com/vihaan/ferritymod/Ferrityconfig.java"
+        ]
+      }
+    },
+    {
+      "name": "FerrityAI",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "ferrity_ai",
+      "metadata": {
+        "files": [
+          "src/main/java/com/vihaan/ferritymod/FerrityAI.java"
+        ]
+      }
+    },
+    {
+      "name": "FerrityChat",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "ferrity_chat",
+      "metadata": {
+        "files": [
+          "src/main/java/com/vihaan/ferritymod/FerrityChat.java"
+        ]
+      }
+    },
+    {
+      "name": "FerrityMemory",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "ferrity_memory",
+      "metadata": {
+        "files": [
+          "src/main/java/com/vihaan/ferritymod/FerrityMemory.java"
+        ]
+      }
+    },
+    {
+      "name": "FerrityWorldContext",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "ferrity_world_context",
+      "metadata": {
+        "files": [
+          "src/main/java/com/vihaan/ferritymod/FerrityWorldContext.java"
+        ]
+      }
+    },
+    {
+      "name": "FerrityConfigScreen",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "ferrity_config_screen",
+      "metadata": {
+        "files": [
+          "src/main/java/com/vihaan/ferritymod/FerrityConfigScreen.java"
+        ]
+      }
+    },
+    {
+      "name": "FerrityActions",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "ferrity_actions",
+      "metadata": {
+        "files": [
+          "src/main/java/com/vihaan/ferritymod/FerrityActions.java"
+        ]
+      }
+    },
+    {
+      "name": "Ferrityitem",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ferrityitem",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/ferritymod/items/ferrityitem.json",
+          "src/main/resources/assets/ferritymod/models/item/ferrityitem.json",
+          "src/main/java/com/vihaan/ferritymod/item/FerrityitemItem.java"
+        ]
+      }
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "tag_elements": {},
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {
+      "entity.ferritymod.ferrity": "Ferrity",
+      "ferritymod.configuration.provider": "AI Provider",
+      "ferritymod.configuration.apiKey": "API Key",
+      "ferritymod.configuration.model": "AI Model (e.g. gemini-3.5-flash)",
+      "ferritymod.configuration.baseurl": "baseUrl (only use with local setups, otherwise leave blank)",
+      "ferritymod.configuration.apikey": "API Key",
+      "item.ferritymod.ferrityitem": "Ferrityitem"
+    }
+  },
+  "metadata": {
+    "files": [
+      "src/main/java/com/vihaan/ferritymod/init/FerritymodModItems.java",
+      "src/main/java/com/vihaan/ferritymod/init/FerritymodModEntityRenderers.java",
+      "src/main/java/com/vihaan/ferritymod/init/FerritymodModEntities.java",
+      "src/main/java/com/vihaan/ferritymod/FerritymodMod.java",
+      "src/main/resources/pack.mcmeta",
+      "src/main/resources/META-INF/neoforge.mods.toml"
+    ]
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "ferritymod",
+    "modName": "Ferrity",
+    "version": "0.1.0",
+    "description": "Basically Verity except he\u0027s always nice and dont become monster ",
+    "author": "Vihaan7_8",
+    "websiteURL": "https://aboutvihaan7-8.yzz.me",
+    "license": "All Rights Reserved",
+    "serverSideOnly": false,
+    "modPicture": "ferritytexture",
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "neoforge-26.1.2",
+    "credits": "just me :o ",
+    "modElementsPackage": "com.vihaan.ferritymod"
+  },
+  "mcreatorVersion": 202600233518
+}

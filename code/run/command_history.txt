@@ -1,0 +1,21 @@
+/summon ferrity:ferrity
+/summon ferrity:Ferrity
+/summon ferritymod:ferrity
+/kill 3ff168d0-204b-4721-8fcc-4fe19422211f
+/tp 3ff168d0-204b-4721-8fcc-4fe19422211f ~10 ~10 ~10
+/summon ferritymod:ferrity
+/give @s ferritymod:ferrityspawnegg
+/kill @e
+/execute as @e[type=ferritymod:ferrity] run data merge entity @s {Health:0f}
+/summon ferritymod:ferrity
+/kill @e[type=item]
+/summon ferritymod:ferrity
+/difficulty peaceful
+/difficulty easy
+/summon ferritymod:ferrity
+/stop
+/summon ferritymod:ferrity
+/difficulty easy
+/summon ferritymod:ferrity
+/time set 1
+/gamemode creative
