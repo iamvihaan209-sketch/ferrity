@@ -1,4 +1,4 @@
-/build/
-/.gradle/
-/run/
-.DS_Store
+/code/build/
+/code/.gradle/
+/code/run/
+/code/.DS_Store
